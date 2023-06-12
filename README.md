@@ -19,3 +19,6 @@ Progress values are integers. Can configure if currently _active_ step is indivi
       pb.setMax(segments);
       add(pb);
 ```
+
+![image](https://github.com/theshoeshiner/vaadin-segmentedprogressbar-addon/assets/2922868/8ed56944-2831-4e71-8a8e-dbf7d98dc25d)
+
