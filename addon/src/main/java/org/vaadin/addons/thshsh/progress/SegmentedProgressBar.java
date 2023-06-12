@@ -13,11 +13,15 @@ import com.vaadin.flow.component.progressbar.ProgressBar;
 
 @CssImport("segmented-progress-bar.css")
 public class SegmentedProgressBar extends HorizontalLayout {
-	
-	private static final Logger LOGGER = LoggerFactory.getLogger(SegmentedProgressBar.class);
 
-	private static final long serialVersionUID = -4842099998398517938L;
-	
+    private static final Logger LOGGER = LoggerFactory.getLogger(SegmentedProgressBar.class);
+
+    private static final long serialVersionUID = -4842099998398517938L;
+    
+    protected static final String LAST_CSS = "last";
+	protected static final String FIRST_CSS = "first";
+    protected static final String SEGMENT_PROGRESS_BAR_CSS_CLASS = "segment-progress-bar";
+
 	protected int max = 1;
 	protected int value = 0;
 	protected int segmentWidthPercent;
@@ -91,9 +95,9 @@ public class SegmentedProgressBar extends HorizontalLayout {
 			for(int i=0;i<max;i++) {
 		    	ProgressBar segmentBar = new ProgressBar();
 		    	segmentBar.setHeight(height);
-		    	segmentBar.addClassName("segment-progress-bar");
-		    	if(i==0) segmentBar.addClassName("first");
-		    	if(i+1==max) segmentBar.addClassName("last");
+		    	segmentBar.addClassName(SEGMENT_PROGRESS_BAR_CSS_CLASS);
+		    	if(i==0) segmentBar.addClassName(FIRST_CSS);
+		    	if(i+1==max) segmentBar.addClassName(LAST_CSS);
 		    	segmentBar.setWidth(segmentWidthPercent+"%");
 		    	this.add(segmentBar);
 		    	segments.add(segmentBar);

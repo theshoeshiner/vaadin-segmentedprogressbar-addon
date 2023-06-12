@@ -29,7 +29,7 @@ public class AddonView extends VerticalLayout {
         
         this.setMargin(true);
 
-       int segments = 8;
+      int segments = 8;
       String width = "500px";
       String height = "20px";
       ProgressBar normal = new ProgressBar(0, segments);
