@@ -1,4 +1,4 @@
-package org.thshsh.vaadin.progress;
+package org.vaadin.addons.thshsh.progress;
 
 import com.vaadin.flow.component.HasText;
 import com.vaadin.flow.component.UI;
@@ -6,14 +6,10 @@ import com.vaadin.flow.component.UI;
 public class SegmentedProgressBarReporter extends ProgressReporter {
 	
 	protected SegmentedProgressBar progressBar;
-	protected HasText message;
-	protected UI ui;
 
 	public SegmentedProgressBarReporter(UI ui,SegmentedProgressBar progressBar,HasText message) {
-		super();
-		this.ui = ui;
+		super(ui,message);
 		this.progressBar = progressBar;
-		this.message = message;
 	}
 
 	
@@ -27,7 +23,7 @@ public class SegmentedProgressBarReporter extends ProgressReporter {
 	public void increment(double val,String message) {
 		int inc = (int)val;
 		ui.access(()->{
-			if(message != null) this.message.setText(message);
+			message(message);
 			progressBar.setValue(progressBar.getValue()+inc);
 		});
 	}
@@ -43,13 +39,6 @@ public class SegmentedProgressBarReporter extends ProgressReporter {
 	}
 
 
-	@Override
-	public void message(String message) {
-		if(message != null) {
-			ui.access(()->{
-				this.message.setText(message);
-			});
-		}
-	}
+	
 
 }

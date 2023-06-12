@@ -6,8 +6,8 @@ import java.util.Random;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.thshsh.vaadin.progress.SegmentedProgressBar;
-import org.thshsh.vaadin.progress.SegmentedProgressBarReporter;
+import org.vaadin.addons.thshsh.progress.SegmentedProgressBar;
+import org.vaadin.addons.thshsh.progress.SegmentedProgressBarReporter;
 
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;

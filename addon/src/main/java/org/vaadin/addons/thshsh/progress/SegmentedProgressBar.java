@@ -1,4 +1,4 @@
-package org.thshsh.vaadin.progress;
+package org.vaadin.addons.thshsh.progress;
 
 import java.util.ArrayList;
 import java.util.List;
