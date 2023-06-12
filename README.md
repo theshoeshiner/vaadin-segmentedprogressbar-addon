@@ -22,3 +22,4 @@ Progress values are integers. Can configure if currently _active_ step is indivi
 
 ![image](https://github.com/theshoeshiner/vaadin-segmentedprogressbar-addon/assets/2922868/8ed56944-2831-4e71-8a8e-dbf7d98dc25d)
 
+Also includes an abstract utility class **org.vaadin.addons.thshsh.progress.ProgressReporter** whose subclasses (SegmentedProgressBarReporter and ProgressBarReporter) can be used to conveniently update a progress bar and a HasText component with a message.
