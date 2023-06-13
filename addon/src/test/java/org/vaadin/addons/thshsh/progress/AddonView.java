@@ -1,20 +1,12 @@
 package org.vaadin.addons.thshsh.progress;
 
-import java.time.Duration;
-import java.time.OffsetDateTime;
-import java.util.Random;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.vaadin.addons.thshsh.progress.SegmentedProgressBar;
-import org.vaadin.addons.thshsh.progress.SegmentedProgressBarReporter;
 
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.component.progressbar.ProgressBar;
 import com.vaadin.flow.router.Route;
 
