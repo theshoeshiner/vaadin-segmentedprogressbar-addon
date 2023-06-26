@@ -11,7 +11,7 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.progressbar.ProgressBar;
 
-@CssImport("segmented-progress-bar.css")
+@CssImport("./segmented-progress-bar.css")
 public class SegmentedProgressBar extends HorizontalLayout {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SegmentedProgressBar.class);
