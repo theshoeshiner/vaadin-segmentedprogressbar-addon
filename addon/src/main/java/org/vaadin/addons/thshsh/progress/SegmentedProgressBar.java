@@ -21,6 +21,7 @@ public class SegmentedProgressBar extends HorizontalLayout {
     protected static final String LAST_CSS = "last";
 	protected static final String FIRST_CSS = "first";
     protected static final String SEGMENT_PROGRESS_BAR_CSS_CLASS = "segment-progress-bar";
+    protected static final String SEGMENTED_PROGRESS_BAR_CSS_CLASS = "segmented-progress-bar";
 
 	protected int max = 1;
 	protected int value = 0;
@@ -30,7 +31,7 @@ public class SegmentedProgressBar extends HorizontalLayout {
 	protected String height;
 	
 	public SegmentedProgressBar() {
-    	this.addClassName("segmented-progress-bar");
+    	this.addClassName(SEGMENTED_PROGRESS_BAR_CSS_CLASS);
 	}
 
 	
@@ -89,7 +90,6 @@ public class SegmentedProgressBar extends HorizontalLayout {
 	
 	protected void updateSegments() {
 		if(segments.size() != max) {
-			LOGGER.debug("updating segments");
 			this.remove(segments.toArray(new Component[segments.size()]));
 			segments.clear();
 			for(int i=0;i<max;i++) {
@@ -102,6 +102,7 @@ public class SegmentedProgressBar extends HorizontalLayout {
 		    	this.add(segmentBar);
 		    	segments.add(segmentBar);
 	    	}
+			updateValue();
 		}
 	}
 	
